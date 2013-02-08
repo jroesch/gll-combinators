@@ -8,12 +8,7 @@ licenses := Seq("BSD-style" -> url("http://www.opensource.org/licenses/bsd-licen
 
 homepage := Some(url("https://github.com/djspiewak/gll-combinators"))
 
-scalaVersion := "2.10.0-RC3"
-
-scalaBinaryVersion <<= (scalaVersion) {
-  case "2.10.0-RC3" => "2.10.0-RC2"
-  case v => v
-}
+scalaVersion := "2.10.0"
 
 crossScalaVersions := Seq("2.9.1", "2.9.2", "2.10.0-RC3")
 
