@@ -24,6 +24,11 @@ publishTo <<= version { v: String =>
     Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 
+resolvers ++= Seq(
+  "snapshots" at "http://oss.sonatype.org/content/repositories/snapshots",
+  "releases"  at "http://oss.sonatype.org/content/repositories/releases"
+)
+
 publishMavenStyle := true
 
 publishArtifact in Test := false
